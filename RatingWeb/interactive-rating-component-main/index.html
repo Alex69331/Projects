@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Overpass" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <div id="fPage">
+      <div id="container1">
+        <div class="image-container">
+          <img id="starImg" src="images/icon-star.svg" alt="star" />
+        </div>
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+      </div>
+      <div id="rating">
+        <div id="circleBtn" data-value="1">
+          <p data-value="1">1</p>
+        </div>
+        <div id="circleBtn" data-value="2">
+          <p data-value="2">2</p>
+        </div>
+        <div id="circleBtn" data-value="3">
+          <p data-value="3">3</p>
+        </div>
+        <div id="circleBtn" data-value="4">
+          <p data-value="4">4</p>
+        </div>
+        <div id="circleBtn" data-value="5">
+          <p data-value="5">5</p>
+        </div>
+      </div>
+      <button id="submitBtn" type="submit">SUBMIT</button>
+    </div>
+
+    <div id="newPage">
+      <img id="newPgImg" src="images/illustration-thank-you.svg" alt="" />
+
+      <p id="ratingShow">You selected out of 5</p>
+
+      <div id="newPageContainer">
+        <h1 id="thanks">Thank you!</h1>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
