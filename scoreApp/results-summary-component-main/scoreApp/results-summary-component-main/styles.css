@@ -1,0 +1,236 @@
+body {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+p {
+  color: hsl(241, 100%, 89%);
+}
+#container1 {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  width: 50%;
+  border-radius: 25px;
+  height: 65vh;
+  display: flex;
+}
+#container1-firstPage {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+
+  width: 50%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+#container1-firstPage-info {
+  margin-top: 2rem;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.showScore {
+  margin-top: 1rem;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+}
+.showScore h1 {
+  margin-bottom: 5px;
+  font-size: 3.5rem;
+  margin-top: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+.showScore p {
+  margin-top: 5px;
+  color: hsl(241, 100%, 89%);
+}
+.showResult {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  color: hsl(221, 100%, 96%);
+}
+.great {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: hsl(0, 0%, 100%);
+}
+.container1-info {
+  margin-top: 10px;
+  margin-bottom: 2.7rem;
+  line-height: 1.1;
+}
+#container1-secondPage {
+  background-color: hsl(0, 0%, 98%);
+  width: 50%;
+  border-radius: 0 25px 25px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  box-shadow: inset;
+}
+
+#container1-secondPage-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.first {
+  color: hsl(0, 100%, 67%);
+}
+.second {
+  color: hsl(39, 100%, 56%);
+}
+.third {
+  color: hsl(166, 100%, 37%);
+}
+
+.forth {
+  color: hsl(234, 85%, 45%);
+}
+.score {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 1rem;
+  background-color: inherit;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#container1-secondPage-info h2 {
+  margin-bottom: 5px;
+}
+span {
+  color: hsla(224, 20%, 57%, 2);
+  margin-right: 1rem;
+}
+#continueBtn {
+  margin-top: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  cursor: pointer;
+}
+.score img {
+  margin-right: 0.5rem;
+}
+#container1-secondPage-info {
+  text-align: left;
+  display: flex;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.score img {
+  margin-left: 0.5rem;
+}
+
+.score h3 {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  font-size: 16px;
+}
+
+.score-bold {
+  color: hsl(224, 40%, 27%);
+  margin-left: auto;
+  font-weight: bold; /* Make the numbers bold */
+  margin-right: 0.5rem; /* Adjust the margin to control the space between the number and /100 */
+}
+
+.score-red {
+  color: hsl(224, 20%, 57%); /* Set the color for the /100 portion */
+}
+.score.first {
+  margin-top: 1.5rem;
+  background-color: hsl(330, 70%, 95%);
+}
+
+.score.second {
+  background-color: hsl(60, 70%, 90%);
+}
+
+.score.third {
+  background-color: hsl(120, 70%, 95%);
+}
+
+.score.fourth {
+  background-color: hsl(210, 70%, 95%);
+}
+
+@media (min-width: 375px) and (max-width: 1024px) {
+  #container1 {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    padding: 0;
+  }
+
+  #container1-firstPage {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+
+  #container1-secondPage {
+    padding: 0;
+    margin-bottom: 3rem;
+    position: absolute;
+    top: 100%; /* Place it below the first container */
+    left: 0;
+    width: 100%;
+    /* Add other styles for the second container */
+  }
+  .showScore {
+    margin: auto;
+    width: 10rem;
+    height: 10rem;
+  }
+  #continueBtn {
+    margin-bottom: 3rem;
+  }
+  #container1-firstPage-info {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #container1-secondPage-info {
+    margin-top: 1rem;
+  }
+  #container1-secondPage-info h2 {
+    margin-top: 0;
+  }
+}
