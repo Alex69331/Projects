@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Hanken+Grotesk"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container1">
+      <div id="container1-firstPage">
+        <div id="container1-firstPage-info">
+          <h1 class="showResult">Your Result</h1>
+          <div class="showScore">
+            <h1>76</h1>
+            <p>of 100</p>
+          </div>
+
+          <h1 class="great">Great</h1>
+          <p class="container1-info">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </div>
+      <div id="container1-secondPage">
+        <div id="container1-secondPage-info">
+          <h2>Summary</h2>
+          <div class="score first">
+            <img src="assets/images/icon-reaction.svg" alt="" />
+            <h3>
+              Reaction <span class="score-bold">80</span>
+              <span class="score-red">/ 100</span>
+            </h3>
+          </div>
+          <div class="score second">
+            <img src="assets/images/icon-memory.svg" alt="" />
+            <h3>
+              Memory <span class="score-bold">92</span>
+              <span class="score-red">/ 100</span>
+            </h3>
+          </div>
+          <div class="score third">
+            <img src="assets/images/icon-verbal.svg" alt="" />
+            <h3>
+              Verbal <span class="score-bold">61</span>
+              <span class="score-red">/ 100</span>
+            </h3>
+          </div>
+          <div class="score fourth">
+            <img src="assets/images/icon-visual.svg" alt="" />
+            <h3>
+              Visual <span class="score-bold">72</span>
+              <span class="score-red">/ 100</span>
+            </h3>
+          </div>
+          <button id="continueBtn">Continue</button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Alex U</a>.
+    </div>
+  </body>
+</html>
