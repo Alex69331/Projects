@@ -220,3 +220,8 @@ span {
     margin-bottom: 3rem;
   }
 }
+@media (min-width: 1800px) and (max-width: 2500px) {
+  #container1 {
+    height: 40vh;
+  }
+}
