@@ -1,0 +1,266 @@
+body {
+  font-family: "Space Mono", sans-serif;
+  background-color: hsl(185, 41%, 84%);
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  color: hsl(186, 14%, 43%);
+}
+#container {
+  font-family: "Space Mono", sans-serif;
+  border-radius: 25px;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  width: 850px;
+  height: 410px;
+  background-color: white;
+}
+#container-first {
+  margin-left: 2rem;
+  height: 100%;
+}
+#container-first h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 2.2rem;
+}
+
+#container-second {
+  display: flex;
+  flex-direction: column;
+  font-family: "Space Mono", sans-serif;
+  font-size: 15px;
+  height: 90%;
+  margin: 3rem 2rem 3rem 3rem;
+  border-radius: 15px;
+  background-color: hsl(183, 100%, 15%);
+  width: 400px;
+}
+#container-second h3 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.billInp {
+  color: hsl(184, 14%, 56%);
+  background-image: url("images/dollar-symbol.png");
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  border: 3px solid transparent; /* Set a default transparent border */
+  background-color: hsl(189, 41%, 97%);
+  padding: 0 10px;
+  padding-right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#tips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.tip {
+  cursor: pointer;
+  border: none;
+  font-family: "Space Mono", sans-serif;
+  border-radius: 5px;
+  background-color: hsl(183, 100%, 15%);
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  width: calc(33.33% - 10px);
+  padding: 5px 0;
+  margin: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+.tip:hover {
+  background-color: hsl(185, 41%, 75%);
+}
+#inputCustomBtn {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+  border: 2px solid transparent;
+  text-align: right;
+  transition: border-color 0.3s;
+}
+
+#inputCustomBtn::placeholder {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+#inputCustomBtn:hover {
+  border-color: hsl(185, 41%, 75%);
+}
+.billInp:hover,
+.billInp:active {
+  border: 3px solid hsl(185, 41%, 55%);
+  border-radius: 5px;
+}
+.redText {
+  float: right;
+  opacity: 0;
+  color: hsl(0, 100%, 70%);
+}
+
+.selected {
+  background-color: hsl(185, 41%, 75%);
+}
+
+.peopleInp {
+  color: hsl(184, 14%, 56%);
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  background-image: url("images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  width: 100%;
+  padding: 5px 10px;
+  padding-right: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+input {
+  font-weight: bold;
+  padding: 0;
+  font-family: "Space Mono", sans-serif;
+  font-size: 24px;
+  text-align: right;
+}
+
+input::placeholder {
+  text-align: left;
+  font-size: 24px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-right: 10px;
+}
+
+#container-second-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-top: 2rem;
+  height: 100%;
+}
+#container-second-page .amount-text {
+  height: 100px;
+}
+#amount {
+  height: auto;
+  margin-left: 2rem;
+}
+#amount p {
+  margin-top: 0;
+}
+.amount-text {
+  height: auto;
+  float: left;
+  margin-top: 0;
+  width: 8rem;
+}
+#amount .result {
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+  margin-right: 1.5rem;
+  float: right;
+  height: 100%;
+  font-size: 3rem;
+  width: auto;
+}
+#totalResult {
+  height: 100px;
+  width: auto;
+}
+.resetBtn {
+  cursor: pointer;
+  padding: 15px;
+  margin: auto 1.5rem 2rem 1.5rem;
+  border-radius: 5px;
+  background-color: hsl(183, 100%, 20%);
+  border: none;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-size: 17px;
+}
+.resetBtn:hover {
+  background-color: hsl(185, 41%, 75%);
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  #container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+  }
+  #container-first {
+    margin: 0;
+    height: auto;
+    width: 90%;
+  }
+  #container-second {
+    margin: 0;
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    height: auto;
+    width: 90%;
+  }
+  #tips {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .tip {
+    width: 100%;
+    margin: 0;
+    padding: 15px 1rem;
+  }
+  #inputCustomBtn {
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    font-size: 24px;
+  }
+  #inputCustomBtn::placeholder {
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+  input {
+    font-size: 42px;
+  }
+  #amount .result {
+    margin-right: 0;
+  }
+  #container-second-page {
+    height: 300px;
+  }
+}

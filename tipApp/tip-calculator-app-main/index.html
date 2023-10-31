@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Space+Mono:400,700"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="container-first">
+        <h3>Bill</h3>
+        <input
+          type="number"
+          class="billInp"
+          id="billInp"
+          value="0"
+          maxlength="7"
+          step="0.01"
+        />
+        <h3>Select Tip %</h3>
+        <div id="tips">
+          <button value="5" class="tip">5%</button>
+          <button value="10" class="tip">10%</button>
+          <button value="15" class="tip">15%</button>
+          <button value="25" class="tip">25%</button>
+          <button value="50" class="tip">50%</button>
+          <input
+            id="inputCustomBtn"
+            type="number"
+            class="tip"
+            placeholder="Custom"
+            value=""
+            maxlength="3"
+          />
+        </div>
+        <h3>Number of People <span class="redText">Can't be zero</span></h3>
+        <input class="peopleInp" type="number" value="0" maxlength="4" />
+      </div>
+      <div id="container-second">
+        <div id="container-second-page">
+          <div id="amount">
+            <div class="amount-text">
+              <h3>Tip Amount</h3>
+              <p>/ person</p>
+            </div>
+            <div id="tipResult" class="result" readonly value="">$0.00</div>
+          </div>
+          <div id="amount">
+            <div class="amount-text">
+              <h3>Total</h3>
+              <p>/ person</p>
+            </div>
+            <div id="totalResult" class="result" value="" readonly>$0.00</div>
+          </div>
+          <button class="resetBtn">RESET</button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Alex U</a>.
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
