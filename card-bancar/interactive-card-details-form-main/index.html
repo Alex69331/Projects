@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first-page">
+      <div id="container-card">
+        <h1 class="card-number">0000 0000 0000 0000</h1>
+        <div class="container-card-informations">
+          <h2 class="container-card-name">FELICIA LEIRE</h2>
+          <h2 id="card-month" class="container-card-date">00</h2>
+          <h2>/</h2>
+          <h2 id="card-year" class="container-card-date2">00</h2>
+        </div>
+      </div>
+      <div id="container-card-blank">
+        <h3 class="card-blank-number" id="cvcNr">000</h3>
+      </div>
+    </div>
+    <div class="second-page">
+      <div id="secondpage-card-informations">
+        <h1>CARDHOLDER NAME</h1>
+        <form>
+          <input
+            id="inputName"
+            type="text"
+            placeholder="e.g. Jane Appleseed- minimum 6 letters"
+            maxlength="20"
+          />
+        </form>
+        <div class="error-container">
+          <span class="inputNameError">Can't be blank </span>
+        </div>
+        <h1>CARD NUMBER</h1>
+        <form>
+          <input
+            id="inputCardNr"
+            type="text"
+            placeholder="e.g.1234 5678 9123 0000"
+            maxlength="19"
+          />
+        </form>
+        <div class="error-container">
+          <span class="inputNrError">Wrong format, you need 16 numbers</span>
+        </div>
+        <div class="card-details">
+          <h1>EXP. DATE (MM/YY)</h1>
+          <h1 class="cvcText">CVC</h1>
+          <div class="forms-container">
+            <form action="">
+              <input
+                id="date-month"
+                class="date"
+                placeholder="MM"
+                type="text"
+                maxlength="2"
+              />
+              <input
+                id="date-year"
+                class="date"
+                placeholder="YY"
+                type="text"
+                maxlength="2"
+              />
+            </form>
+
+            <form action="">
+              <input
+                id="cvc"
+                class="cvc"
+                type="text"
+                placeholder="e.g. 123"
+                maxlength="3"
+              />
+            </form>
+          </div>
+          <div class="error-container">
+            <span class="dateError">Can't be blank</span>
+            <span class="cvcError">Can't be blank</span>
+          </div>
+        </div>
+
+        <button id="confirmBtn">Confirm</button>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Alex U</a>.
+      </div>
+    </div>
+    <div id="thanksPage">
+      <h1>THANK YOU!</h1>
+      <p>We've added your card details</p>
+      <button id="continueBtn">Continue</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

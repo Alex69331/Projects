@@ -1,0 +1,257 @@
+body {
+  display: flex;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  font-weight: lighter;
+  margin: 0;
+}
+.first-page {
+  height: 800px;
+  width: 480px;
+
+  background-image: url(images/bg-main-desktop.png);
+}
+.second-page {
+  margin-top: 12rem;
+  margin-left: 15rem;
+  background-color: white;
+}
+.second-page h1 {
+  margin-top: 1.5rem;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+.second-page form input {
+  font-size: 18px;
+  height: 2.5rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 380px;
+}
+
+input {
+  padding-left: 10px;
+}
+.forms-container {
+  display: flex;
+}
+
+.card-details h1 {
+  display: inline-block;
+}
+
+.card-details .date {
+  width: 70px;
+  margin-right: 10px;
+}
+.cvcText {
+  margin-left: 40px;
+  margin-bottom: 0px;
+}
+.card-details .cvc {
+  margin-left: 10px;
+  width: 180px;
+}
+#container-card::before,
+#container-card::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+#container-card::after {
+  height: 15px;
+  width: 15px;
+  background-color: inherit;
+  border: 2px solid white;
+  margin-top: 2.3rem;
+  margin-left: 85px;
+}
+#container-card {
+  font-weight: lighter;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  border-radius: 5px;
+  margin-top: 8rem;
+  margin-left: 10rem;
+  position: absolute;
+  background-image: url("images/bg-card-front.png");
+  background-repeat: no-repeat;
+  height: 220px;
+  width: 440px;
+}
+#container-card-blank {
+  border-radius: 5px;
+  position: absolute;
+  background-image: url("images/bg-card-back.png");
+  background-repeat: no-repeat;
+  height: 230px;
+  width: 440px;
+  margin-top: 24rem;
+  margin-left: 15rem;
+}
+
+.container-card-informations {
+  margin-top: 8px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: row;
+}
+.container-card-name {
+  margin-left: 1.5rem;
+}
+.container-card-date {
+  float: right;
+  margin-left: auto;
+}
+.container-card-date2 {
+  margin-right: 1.5rem;
+}
+
+.card-number {
+  font-size: 25px;
+  letter-spacing: 5px;
+  margin-bottom: 0px;
+  margin-top: 8.5rem;
+  margin-left: 1.5rem;
+}
+.card-blank-number {
+  color: white;
+  margin-top: 6.7rem;
+  margin-left: 22rem;
+}
+#confirmBtn {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+span {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Space Grotesk", sans-serif;
+  color: hsl(0, 100%, 66%);
+}
+.error-container {
+  margin-top: 5px;
+  display: flex;
+  align-items: center; /* Adjust alignment if needed */
+}
+.cvcError {
+  float: right;
+  margin-left: auto;
+  margin-right: 6rem;
+}
+
+.attribution {
+  display: flex;
+  align-items: center;
+  margin-top: 13rem;
+}
+#thanksPage {
+  margin-top: 15rem;
+  height: 300px;
+  margin-left: 18rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#thanksPage::before {
+  background-image: url(images/icon-complete.svg);
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  margin-bottom: 14rem;
+}
+#continueBtn {
+  width: 330px;
+  margin-top: 1.5rem;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+#thanksPage h1 {
+  margin-top: 3.5rem;
+  margin-bottom: 0px;
+  font-size: 25px;
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .first-page {
+    background-image: url(images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+  }
+  .second-page {
+    margin-top: 4rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #secondpage-card-informations {
+    margin-left: 2.5rem;
+  }
+  .card-details .date {
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .second-page h1 {
+    font-size: 11px;
+  }
+  #confirmBtn {
+    width: 395px;
+  }
+  .cvcText {
+    margin-left: 10px;
+  }
+  #container-card {
+    width: 420px;
+    z-index: 2;
+    margin-top: 11.2rem;
+    margin-left: 3rem;
+  }
+  #container-card-blank {
+    height: 250px;
+    z-index: 1;
+    margin-top: 2.5rem;
+    margin-left: 7em;
+    margin-right: 1rem;
+  }
+  .card-details .cvc {
+    width: 140%;
+    margin-right: 0;
+  }
+  .second-page form input {
+    width: 90%;
+  }
+  #confirmBtn {
+    width: 93%;
+  }
+  #thanksPage {
+    margin-left: 0;
+  }
+}
