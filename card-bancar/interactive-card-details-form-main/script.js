@@ -36,7 +36,7 @@ inputName.addEventListener("input", function () {
     inputName.value = words.slice(0, 2).join(" ");
     cardName.textContent = words.slice(0, 2).join(" ");
   }
-  if (enteredText.length === 0) {
+  if (enteredText.length <6) {
     inputName.style.border = "1px solid hsl(0, 100%, 66%)";
     inputNameError.style.display = "flex";
   } else {
