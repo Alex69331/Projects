@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar start -->
+    <div id="container-first-page">
+      <div id="container1">
+        <div id="step1">
+          <span>1</span>
+        </div>
+        <div id="step2">
+          <span>2</span>
+        </div>
+        <div id="step3">
+          <span>3</span>
+        </div>
+        <div id="step4">
+          <span>4</span>
+        </div>
+        <div class="container1-steps">
+          <div class="step step1">
+            <h2>STEP 1</h2>
+            <h1>YOUR INFO</h1>
+          </div>
+          <div class="step step2">
+            <h2>STEP 2</h2>
+            <h1>SELECT PLAN</h1>
+          </div>
+          <div class="step step3">
+            <h2>STEP 3</h2>
+            <h1>ADD-ONS</h1>
+          </div>
+          <div class="step step4">
+            <h2>STEP 4</h2>
+            <h1>SUMMARY</h1>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+
+      <div id="container2">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+        <div class="first-page-error">
+          <h3>Name</h3>
+          <span id="nameError">This field is required!</span>
+        </div>
+        <form id="nameForm">
+          <input
+            type="text"
+            id="nameInput"
+            name="name"
+            pattern="[A-Za-z]+"
+            placeholder="e.g. Stephen King"
+            required
+          />
+        </form>
+        <div class="first-page-error">
+          <h3>Email Adress</h3>
+          <span id="mailError">Invalid email!</span>
+        </div>
+        <form id="mailForm">
+          <input
+            type="email"
+            id="mailInput"
+            name="email"
+            pattern=".+@example\.com"
+            placeholder=" e.g. stephenking@lorem.com "
+            required
+          />
+        </form>
+        <div class="first-page-error">
+          <h3>Phone Number</h3>
+          <span id="telError">This field is required!</span>
+        </div>
+        <form id="telForm">
+          <input
+            type="tel"
+            id="telNr"
+            name="name"
+            pattern="[0-9]*"
+            placeholder=" e.g. +1 234 567 890 "
+            required
+          />
+        </form>
+        <div class="page1Btn">
+          <button type="submit" id="nextBtn">Next Step</button>
+        </div>
+      </div>
+
+      <div id="container3">
+        <h1>Select your plan</h1>
+        <p class="select-plan-info">
+          You have the option of monthly or yearly billing.
+        </p>
+        <div id="plans">
+          <div class="plan">
+            <div class="plan1">
+              <img src="assets/images/icon-arcade.svg" alt="" />
+              <h3 class="planTitle">Arcade</h3>
+              <p class="planText1">$9/mo</p>
+              <span class="yearly-text">2 months free</span>
+            </div>
+          </div>
+          <div class="plan">
+            <div class="plan2">
+              <img src="assets/images/icon-advanced.svg" alt="" />
+              <h3 class="planTitle">Advanced</h3>
+              <p class="planText2">$12/mo</p>
+              <span class="yearly-text">2 months free</span>
+            </div>
+          </div>
+          <div class="plan">
+            <div class="plan3">
+              <img src="assets/images/icon-pro.svg" alt="" />
+              <h3 class="planTitle">Pro</h3>
+              <p class="planText3">$15/mo</p>
+              <span class="yearly-text">2 months free</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <div class="monthly">Monthly</div>
+            <div class="toggle" id="toggleBar">
+              <div class="indicator"></div>
+            </div>
+            <div class="yearly">Yearly</div>
+          </div>
+        </div>
+        <div class="page2-btns">
+          <button id="page2-backBtn">Go Back</button>
+          <button id="page2-nextBtn">Next Step</button>
+        </div>
+      </div>
+      <div id="container4">
+        <h1>Pick add-ons</h1>
+        <p class="add-on-info">Add-ons help enhance your gaming experience.</p>
+        <div class="extra-service" id="service1Parent">
+          <input type="checkbox" id="service1" class="checkbox-input" />
+          <label for="service1" class="checkbox-label"></label>
+          <div class="extra-service-plan">
+            <h3>Online service</h3>
+            <p>Access to multiplayer games</p>
+          </div>
+          <span id="add-on-price1"> +$1/mo </span>
+        </div>
+        <div class="extra-service" id="service2Parent">
+          <input type="checkbox" id="service2" class="checkbox-input" />
+          <label for="service2" class="checkbox-label"></label>
+          <div class="extra-service-plan">
+            <h3>Larger storage</h3>
+            <p>Extra 1TB of cloud save</p>
+          </div>
+          <span id="add-on-price2"> +$2/mo </span>
+        </div>
+        <div class="extra-service" id="service3Parent">
+          <input type="checkbox" id="service3" class="checkbox-input" />
+          <label for="service3" class="checkbox-label"></label>
+          <div class="extra-service-plan">
+            <h3>Customizable Profile</h3>
+            <p>Custom theme on your profile</p>
+          </div>
+          <span id="add-on-price3"> +$2/mo </span>
+        </div>
+
+        <div class="page3-btns">
+          <button id="page3-backBtn">Go Back</button>
+          <button id="page3-nextBtn">Next</button>
+        </div>
+      </div>
+      <div id="container5">
+        <h1>Finishing up</h1>
+        <p class="double-check-text">
+          Double-check everything looks OK before confirming.
+        </p>
+        <div id="check-out">
+          <div class="check-out-details">
+            <div class="check-out-text">
+              <h3 id="selected-final-plan">Arcade(Monthly)</h3>
+              <p class="change-text">Change</p>
+            </div>
+            <span id="selected-plan-price">$9/mo</span>
+          </div>
+          <hr />
+          <div class="check-out-details2">
+            <div class="check-out-text">
+              <div id="check-out-option">
+                <p id="add-on-option"></p>
+                <span id="add-on-price"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="check-out-total">
+          <p id="total-price">Total (per month)</p>
+          <span id="total-price-checkout"></span>
+        </div>
+        <div class="page3-btns">
+          <button class="page4-backBtn" id="page3-backBtn">Go Back</button>
+          <button
+            class="page4-confirmBtn"
+            id="page3-nextBtn"
+            style="
+              background-color: hsl(243, 100%, 62%);
+              border: none;
+              transition: background-color 0.3s;
+              width: 110px;
+            "
+            onmouseover="this.style.backgroundColor='hsl(243, 100%, 82%)'"
+            onmouseout="this.style.backgroundColor='hsl(243, 100%, 12%)'"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+      <div id="container6">
+        <img id="thankYouImg" src="assets/images/icon-thank-you.svg" alt="" />
+        <h1>Thank you!</h1>
+        <h3>
+          Thanks for confirming your subscription! We hope you have fun using
+          our platform. If you ever need support, please feel free to email us
+          at support@loremgaming.com.
+        </h3>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Alex U</a>.
+    </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
