@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="big-container">
+      <div id="container1"></div>
+      <div id="list-container">
+        <div class="first-line">
+          <h1>TODO</h1>
+          <img class="sun" src="images/icon-sun.svg" alt="" />
+          <img class="moon" src="images/icon-moon.svg" alt="" />
+        </div>
+        <div class="create-container">
+          <input
+            type="checkbox"
+            class="myCheckbox"
+            name="myCheckbox"
+            id="numbersCheckbox"
+          />
+          <input
+            maxlength="38"
+            class="create-newTodo"
+            placeholder="Create a new todo..."
+            type="text"
+            id="newTodoInput"
+          />
+        </div>
+        <div id="todo-list">
+          <div id="container-items-list">
+            <ul>
+              <li class="items-left">
+                <span class="items-left-number">0</span>items left
+              </li>
+              <div class="list-middle-buttons">
+                <li class="list-all">All</li>
+                <li class="list-active">Active</li>
+                <li class="list-completed">Completed</li>
+              </div>
+              <div class="list-final-button">
+                <li class="list-clear-completed">Clear Completed</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="container2">
+        <!-- <p>Drag and drop to reorder list</p> -->
+      </div>
+      <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Alex U</a>.
+      </div> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
