@@ -1,0 +1,268 @@
+body {
+  background-image: url(images/bg-header-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(180, 29%, 50%);
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+}
+#first-page {
+  background-color: hsl(180, 52%, 96%);
+  margin: 0;
+  text-align: left;
+  padding-bottom: 5rem;
+  margin-top: 9rem;
+}
+.left-part {
+  display: flex;
+  flex-direction: column;
+}
+.job-list {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 1rem 0.5rem 1rem 2rem;
+  margin: 1rem 10rem;
+  height: 100px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.job-list:nth-child(1),
+.job-list:nth-child(2) {
+  border-left: 4px solid hsl(180, 32%, 52%);
+}
+#content {
+  margin-top: 3rem;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+img {
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 4.8rem;
+  width: 4.8rem;
+}
+.brand-name {
+  display: flex;
+  margin-top: 13px;
+}
+.job-info {
+  display: flex;
+}
+ul li::before {
+  content: "\2022";
+  font-size: 12px;
+  margin-right: 10px;
+}
+ul {
+  float: left;
+  margin-right: auto;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.job-language {
+  margin: auto;
+  margin-right: 1rem;
+}
+.job-language span {
+  cursor: pointer;
+  text-align: center;
+  color: hsl(180, 39%, 41%);
+  background-color: hsl(180, 51%, 96%);
+  padding: 8px;
+  border-radius: 2px;
+  margin-right: 0.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.left-part {
+  width: 300px;
+}
+.job-list img {
+  max-width: 100px;
+}
+h1,
+h3 {
+  margin: 0;
+}
+h2:hover {
+  transition: 0.2s;
+  color: hsl(180, 52%, 46%);
+  cursor: pointer;
+}
+h3 {
+  margin-top: 3px;
+  color: hsl(180, 52%, 46%);
+  margin-right: 0.7rem;
+  font-size: 15px;
+}
+h1 {
+  font-size: 12px;
+  background-color: hsl(180, 14%, 20%);
+  border-radius: 15px;
+  padding: 7px 8px 4px 8px;
+  color: white;
+  margin-right: 5px;
+}
+h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.job-info p,
+.job-info ul {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  margin-top: 10px;
+  color: gray;
+}
+
+.newTag {
+  background-color: hsl(180, 39%, 42%);
+}
+span:hover {
+  transition: 0.3s;
+  color: white;
+  background-color: hsl(180, 32%, 52%);
+}
+#searchBar {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 115px;
+  left: 10rem;
+  width: calc(100% - 20rem);
+  height: 60px;
+  background-color: white;
+  align-items: center;
+  justify-content: left;
+  opacity: 0;
+}
+#searchBar h4 {
+  width: 50px;
+  text-align: center;
+  align-items: center;
+  float: right;
+  margin-right: 1.5rem;
+  color: hsl(180, 8%, 52%);
+}
+#searchBar h4:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  color: hsl(180, 32%, 52%);
+  text-decoration: underline;
+}
+#searchBar span {
+  color: hsl(180, 32%, 52%);
+  padding-left: 10px;
+  display: flex;
+  margin-left: 1rem;
+  align-items: center;
+  background-color: #f0f0f0;
+  margin-right: 0px;
+  border-radius: 5px;
+  padding-right: 0;
+  height: 30px;
+}
+#searchBar span:first-child {
+  margin-left: 2rem;
+}
+#searchBar span:hover {
+  color: hsl(180, 32%, 52%);
+}
+#clearBtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.remove-icon {
+  margin-left: 25px;
+  margin-bottom: 10px;
+  width: 12px;
+  height: 12px;
+  padding: 8px;
+  cursor: pointer;
+  margin-right: 0;
+  background-color: hsl(180, 32%, 52%);
+}
+
+.remove-icon:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+#searchBar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#clearBtn {
+  position: relative;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(images/bg-header-mobile.svg);
+  }
+  .job-list {
+    margin: 4rem 2rem 2rem 2rem;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+  }
+  #searchBar {
+    height: 100px;
+    left: 2rem;
+    margin-right: 2rem;
+    width: calc(100% - 4rem);
+  }
+  .job-list img {
+    position: absolute;
+    left: 60px;
+    margin-top: -3.5rem;
+  }
+  .brand-name {
+    margin-top: 2rem;
+  }
+  .left-part {
+    line-height: 1.2rem;
+    height: 120px;
+    width: 100%;
+  }
+  .job-language {
+    width: 70%;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .job-language span {
+    line-height: 3rem;
+    margin-right: 1rem;
+  }
+  .mobile-hr {
+    display: block;
+    width: calc(100% - 2rem);
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1rem 0;
+    margin-right: 1rem;
+  }
+  h1 {
+    margin-left: 0.5rem;
+    letter-spacing: 1.1px;
+  }
+  h3 {
+    margin-top: 5px;
+  }
+  .job-list:nth-child(1),
+  .job-list:nth-child(2) {
+    border-left: 5px solid hsl(180, 32%, 52%);
+  }
+  #searchBar span:first-child {
+    margin-left: 1rem;
+  }
+}
