@@ -1,0 +1,10 @@
+{
+  "config": {
+    "disable-tls": true
+  },
+  "scripts": {
+    "my-custom-script": "echo Hello from my custom script!",
+    "another-script": "echo Another script"
+  },
+  "require": {}
+}

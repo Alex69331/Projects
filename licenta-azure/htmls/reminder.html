@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/reminders.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Reminder</title>
+  </head>
+  <body>
+    <div class="topBar"></div>
+    <img class="snap-logo" src="../images/logo.svg" alt="" />
+    <div id="container-bar">
+      <style>
+        #container-bar {
+          margin-top: 0.6rem;
+        }
+      </style>
+      <div class="links">
+        <div class="dropdown">
+          <h3 class="feature-heading">
+            Features
+            <img class="arrow-img" src="../images/icon-arrow-down.svg" alt="" />
+          </h3>
+          <div class="dropdown-content">
+            <a href="../todoApp/todo-app-main/index.html">
+              <img src="../images/icon-todo.svg" alt="" /><span>Todo List</span>
+            </a>
+            <a href="#">
+              <img src="../images/icon-calendar.svg" alt="" /><span
+                >Calendar</span
+              ></a
+            >
+            <a href="#">
+              <img src="../images/icon-reminders.svg" alt="" /><span
+                >Reminders</span
+              ></a
+            >
+            <a href="#">
+              <img src="../images/icon-planning.svg" alt="" /><span
+                >Planning</span
+              ></a
+            >
+          </div>
+        </div>
+        <div class="dropdown">
+          <h3 class="company-heading">
+            Company
+            <img
+              class="arrow-img2"
+              src="../images/icon-arrow-down.svg"
+              alt=""
+            />
+          </h3>
+          <div class="dropdown-content dropdown-content-2">
+            <a href="../htmls/history.html">History</a>
+            <a href="../htmls/team.html">Our Team</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <a href="../static-job-listings-master\careers.html"
+          ><h3>Careers</h3></a
+        >
+        <a href="../htmls/about.html"><h3>About</h3></a>
+        <a href="../htmls/home.html"><h3>Home</h3></a>
+        <div>
+          <a id="logout-mobile" href="../index.php"
+            ><button id="logout-mobilebtn">Logout</button></a
+          >
+        </div>
+      </div>
+      <div>
+        <a id="logout-a" href="../index.php"
+          ><button id="logout">Logout</button></a
+        >
+      </div>
+    </div>
+    <img class="mobile-menu" src="../images/icon-menu.svg" alt="" />
+    <img class="mobile-menu-close" src="../images/icon-close-menu.svg" alt="" />
+
+    <div class="reminders-page">
+      <div id="reminders-workplace">
+        <h1>Reminders</h1>
+        <div class="page-blank">
+          <img class="reminder-previewImg" src="../images/preview.jpg" alt="" />
+          <div class="no-reminder-text">
+            <h2>No reminders</h2>
+            <p>Create a reminder and it will show up here</p>
+          </div>
+        </div>
+        <div class="added-reminder">
+          <div class="pinned-text-line">
+            <h3 class="pinnedText">Pinned</h3>
+            <img
+              class="saveInCategoryImg"
+              src="../images/diskette.png"
+              alt=""
+            />
+          </div>
+          <div class="pinned-reminders"></div>
+          <h3 class="pinnedText">Upcoming</h3>
+          <div class="upcoming-reminders"></div>
+        </div>
+        <div id="search-container">
+          <h3>Pinned</h3>
+          <div class="pinned-container">
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+          <h3>Category</h3>
+          <div class="categories-searchBar"></div>
+          <h3>Reminder Scheduled</h3>
+          <div class="reminder-scheduled">
+            <button>Today</button>
+            <button>Tomorrow</button>
+          </div>
+          <h3>Colors</h3>
+          <div class="colors-container">
+            <div
+              class="color-option"
+              id="color1"
+              style="background-color: white"
+            ></div>
+
+            <div
+              class="color-option"
+              id="color2"
+              style="background-color: orange"
+            ></div>
+            <div
+              class="color-option"
+              id="color3"
+              style="background-color: #89cff0"
+            ></div>
+            <div
+              class="color-option"
+              id="color4"
+              style="background-color: salmon"
+            ></div>
+            <div
+              class="color-option"
+              id="color5"
+              style="background-color: aquamarine"
+            ></div>
+
+            <div
+              class="color-option"
+              id="color6"
+              style="background-color: lightpink"
+            ></div>
+          </div>
+        </div>
+        <div id="category-container">
+          <div class="category-container-text">
+            <h3>Categories</h3>
+            <h3 class="editBtn">Edit</h3>
+          </div>
+          <div class="added-categories">
+            <div class="category">
+              <div class="newInputCat"></div>
+              <input
+                maxlength="20"
+                placeholder="Add new category"
+                class="addNewCategory"
+                type="text"
+              />
+            </div>
+          </div>
+          <hr />
+          <div id="deletedCategoryBtn">
+            <img class="binImg" src="../images/bin.png" alt="" />
+            Deleted
+          </div>
+          <div id="deletedCategoriesDiv">
+            <h4>Deleted categories</h4>
+            <img
+              src="../images/icon-cross.svg"
+              class="closeDeleteCatContainer"
+              alt=""
+            />
+            <div class="deletedCategories">
+              <ul></ul>
+            </div>
+          </div>
+          <button id="createCategory">Create new category</button>
+        </div>
+        <div id="add-reminder-container">
+          <div class="emojis-div">
+            <img class="backBtnReminder" src="../images/back.png" alt="" />
+            <div class="emojis-div-right">
+              <img class="unpinned" src="../images/unpinned.png" alt="" />
+              <img class="pinned" src="../images/office-push-pin.png" alt="" />
+              <img class="bell-on" src="../images/bell-on.png" alt="" />
+              <img class="bell-off" src="../images/alarm.png" alt="" />
+              <img
+                class="open-categories-container"
+                src="../images/categories.png"
+                alt=""
+              />
+            </div>
+            <div class="alarmOnContainer">
+              <h2>When to remind?</h2>
+              <div id="todayInputDiv">
+                <input id="todayInput" type="text" placeholder="Select date" />
+                <img
+                  class="calendarImg"
+                  src="../images/calendar.png"
+                  alt=""
+                  class="calendar-icon"
+                />
+              </div>
+              <div class="select-hour">
+                <input id="timeInput" placeholder="After 5 Mins." type="text" />
+                <img class="clockImg" src="../images/clock.png" alt="" />
+              </div>
+              <div class="alarmButtons">
+                <button id="alarmCancelBtn">Cancel</button>
+                <button id="alarmSaveBtn">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="blurContainer">
+            <input placeholder="Title" class="reminder-title" type="text" />
+            <textarea placeholder="Content" class="reminder-text"></textarea>
+            <div class="colors-container">
+              <div
+                class="color-option"
+                id="color1"
+                style="background-color: white"
+              ></div>
+
+              <div
+                class="color-option"
+                id="color2"
+                style="background-color: orange"
+              ></div>
+              <div
+                class="color-option"
+                id="color3"
+                style="background-color: #89cff0"
+              ></div>
+              <div
+                class="color-option"
+                id="color4"
+                style="background-color: salmon"
+              ></div>
+              <div
+                class="color-option"
+                id="color5"
+                style="background-color: aquamarine"
+              ></div>
+
+              <div
+                class="color-option"
+                id="color6"
+                style="background-color: lightpink"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="circle-space"></div>
+      <div class="reminders-container-bottom">
+        <div id="reminders-bottom-bar">
+          <img class="bar-emoji" src="../images/burger-bar.png" alt="" />
+          <div class="plus-container">
+            <img class="accept-sign" src="../images/accept.png" alt="" />
+            <img class="plusSign" src="../images/plus.png" alt="" />
+          </div>
+          <img class="lupa-emoji" src="../images/search.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="../scripts/reminders.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </body>
+</html>
