@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>Home</title>
+    <script type="text/javascript">
+      function preventBack() {
+        if (window.location.pathname === "/home.html") {
+          window.history.forward();
+        }
+      }
+      setTimeout("preventBack()", 0);
+      window.onunload = function () {
+        null;
+      };
+    </script>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topBar"></div>
+    <img class="snap-logo" src="../images/logo.svg" alt="" />
+    <div id="container-bar">
+      <div class="links">
+        <div class="dropdown">
+          <h3 class="feature-heading">
+            Features
+            <img class="arrow-img" src="../images/icon-arrow-down.svg" alt="" />
+          </h3>
+          <div class="dropdown-content">
+            <a href="../todoApp/todo-app-main/index.html">
+              <img src="../images/icon-todo.svg" alt="" /><span>Todo List</span>
+            </a>
+            <a href="#">
+              <img src="../images/icon-calendar.svg" alt="" /><span
+                >Calendar</span
+              ></a
+            >
+            <a href="../htmls\reminder.html">
+              <img src="../images/icon-reminders.svg" alt="" /><span
+                >Reminders</span
+              ></a
+            >
+            <a href="#">
+              <img src="../images/icon-planning.svg" alt="" /><span
+                >Planning</span
+              ></a
+            >
+          </div>
+        </div>
+        <div class="dropdown">
+          <h3 class="company-heading">
+            Company
+            <img
+              class="arrow-img2"
+              src="../images/icon-arrow-down.svg"
+              alt=""
+            />
+          </h3>
+          <div class="dropdown-content dropdown-content-2">
+            <a href="../htmls\history.html">History</a>
+            <a href="../htmls/team.html">Our Team</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <a href="../static-job-listings-master\careers.html"
+          ><h3>Careers</h3></a
+        >
+        <a href="../htmls\about.html"><h3>About</h3></a>
+        <div>
+          <a id="logout-mobile" href="../index.php"
+            ><button id="logout-mobilebtn">Logout</button></a
+          >
+        </div>
+      </div>
+      <div>
+        <a id="logout-a" href="../index.php"
+          ><button id="logout">Logout</button></a
+        >
+      </div>
+    </div>
+
+    <img class="mobile-menu" src="../images/icon-menu.svg" alt="" />
+    <img class="mobile-menu-close" src="../images/icon-close-menu.svg" alt="" />
+    <div id="container">
+      <div id="container-details">
+        <h1>
+          Make <br />
+          remote work
+        </h1>
+        <h2>
+          Get your team in sync, no matter your location. <br />
+          Streamline processes, create team rituals, and <br />
+          watch productivity soar.
+        </h2>
+        <div id="down-part-index">
+          <a href="../htmls/about.html" id="learnBtn">Learn more</a>
+          <div class="container-sponsors">
+            <img src="../images/client-databiz.svg" alt="" />
+            <img
+              class="audiophile-img"
+              src="../images/client-audiophile.svg"
+              alt=""
+            />
+            <img src="../images/client-meet.svg" alt="" />
+            <img src="../images/client-maker.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="container-photo">
+        <img
+          class="desktop-hero-photo"
+          src="../images/image-hero-desktop.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>
