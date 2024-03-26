@@ -1,0 +1,531 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: none;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.reminders-page {
+  padding-bottom: 8rem;
+  padding-top: 3rem;
+  min-height: 100vh;
+  background-color: hsl(0, 5%, 95%);
+}
+#reminders-workplace {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.page-blank {
+  text-align: center;
+  justify-content: center;
+  padding: 0.5rem;
+  padding-bottom: 4rem;
+  padding-top: 3rem;
+  border-radius: 15px;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+  height: 430px;
+  /* display: none; */
+}
+.no-reminder-text {
+  margin: auto;
+  height: 150px;
+  width: 180px;
+}
+.no-reminder-text h2 {
+  text-wrap: nowrap;
+  width: 100%;
+}
+.pinned-reminders {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.7rem;
+}
+.pinned-reminders span {
+  border: 1px solid gray;
+  padding: 5px;
+}
+.upcoming-reminders span {
+  border: 1px solid gray;
+  padding: 5px;
+}
+.upcoming-reminders {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.added-reminder {
+  text-align: left;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  border-radius: 15px;
+  background-color: hsl(0, 16%, 98%);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  min-height: 430px;
+  display: none;
+}
+.pinnedText {
+  padding-left: 0.5rem;
+  font-size: 16px;
+}
+.added-reminder h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: gray;
+}
+.remindernr1 h3 {
+  overflow-wrap: break-word;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.remindernr1 p {
+  margin-top: 3px;
+  margin-bottom: 25px;
+  overflow-wrap: break-word;
+}
+.remindernr1 span {
+  font-weight: 500;
+}
+.remindernr1 {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 2.2);
+  overflow: hidden;
+  text-wrap: wrap;
+  margin: auto;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  padding: 0 1rem 1.5rem 1rem;
+}
+#reminders-bottom-bar {
+  opacity: 85%;
+  background-color: white;
+  position: relative;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  height: 4rem;
+  border-top: 1px solid #ccc;
+}
+.bar-emoji {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.plusSign {
+  opacity: 100%;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 2.2);
+}
+.lupa-emoji {
+  opacity: 100%;
+  cursor: pointer;
+  float: right;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+.bar-emoji {
+  opacity: 100%;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.plus-container {
+  opacity: 100%;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0px;
+  display: flex;
+  border-radius: 50%;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to bottom, transparent 50%, hsl(0, 5%, 95%) 50%);
+  border-bottom: 1px solid #ccc;
+}
+.plusSign:hover {
+  transform: scale(1.04);
+  transition: transform 0.3s ease;
+}
+.reminders-container-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+#search-container {
+  border-radius: 15px;
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+  display: flex;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 2.2);
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  padding: 1rem;
+  background-color: ghostwhite;
+  display: none;
+}
+#search-container button {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(206, 205, 205);
+}
+#search-container button:hover {
+  background-color: rgb(170, 169, 169);
+  transition: 0.3s;
+}
+.pinned-container button {
+  margin-right: 5px;
+  width: 60px;
+  padding: 2px;
+  cursor: pointer;
+}
+.categories-searchBar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.categories-searchBar button {
+  padding: 5px;
+  width: 100px;
+  cursor: pointer;
+}
+.reminder-scheduled button {
+  width: 100px;
+  padding: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.colors-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+}
+
+.color-option {
+  border: 0.5px solid gray;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.color-option:hover {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 2.2);
+}
+#category-container {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 2.2);
+  opacity: 80%;
+  width: 300px;
+  padding: 0rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 70px;
+  left: 10px;
+  border-radius: 15px;
+  background-color: hsl(0, 16%, 98%);
+  display: none;
+}
+#category-container hr {
+  border: 1px solid gray;
+  width: 100%;
+}
+.category-container-text {
+  margin-bottom: 10px;
+  display: flex;
+}
+.category-container-text h3 {
+  font-weight: 500;
+  color: gray;
+}
+.editBtn {
+  cursor: pointer;
+  float: right;
+  margin-left: auto;
+}
+.editBtn:hover {
+  transition: 0.5s;
+  color: black;
+  text-decoration: underline;
+}
+.binImg {
+  width: 14px;
+  margin-right: 5px;
+}
+.folderImg {
+  margin-right: 7px;
+}
+.added-categories {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.category {
+  display: flex;
+  flex-direction: column;
+}
+.newCategory {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  margin-bottom: 10px;
+}
+.newInputCat {
+  display: flex;
+  flex-direction: column;
+}
+.added-categories span {
+  float: right;
+  margin-left: auto;
+}
+#createCategory {
+  font-size: 15px;
+  font-weight: 800;
+  margin: 1rem 0;
+  cursor: pointer;
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: orange;
+}
+#createCategory:hover {
+  color: white;
+  transition: 0.3s;
+}
+.deleteCategoryBtn {
+  cursor: pointer;
+  display: none;
+  padding-left: 1rem;
+}
+.addNewCategory {
+  font-size: 17px;
+  border: none;
+  background-color: hsl(0, 0%, 90%);
+  padding: 0.3rem 0 0.3rem 0.5rem;
+  display: none;
+}
+
+#deletedCategoryBtn {
+  width: 77px;
+  cursor: pointer;
+}
+#add-reminder-container {
+  position: relative;
+  z-index: 1;
+  background-color: rgb(228, 225, 225);
+  border-radius: 15px;
+  margin: auto;
+  display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  font-weight: 500;
+  padding: 1rem;
+  width: 300px;
+  display: none;
+}
+.backBtnReminder {
+  float: left;
+}
+.pinned {
+  display: none;
+}
+.bell-on {
+  display: none;
+}
+.accept-sign {
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 2.2);
+  display: none;
+}
+.accept-sign:hover {
+  transform: scale(1.04);
+  transition: transform 0.3s ease;
+}
+#add-reminder-container img {
+  cursor: pointer;
+}
+#add-reminder-container img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.emojis-div img {
+  margin-right: 6px;
+}
+.emojis-div img:last-child {
+  margin-right: 0;
+}
+.emojis-div {
+  width: 100%;
+}
+.emojis-div-right {
+  float: right;
+  margin-left: auto;
+}
+.reminder-title {
+  border: 1px solid rgb(228, 225, 225);
+  border-radius: 5px;
+  background-color: white;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 95%;
+}
+.reminder-text {
+  border-radius: 5px;
+  border: 1px solid rgb(228, 225, 225);
+  background-color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 95%;
+  min-height: 50px;
+  max-height: 200px;
+  max-width: 285px;
+  min-width: 285px;
+}
+.alarmOnContainer {
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 15px;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+  margin-left: 1rem;
+  width: 210px;
+  display: none;
+}
+.alarmButtons {
+  margin-left: auto;
+  float: right;
+  display: flex;
+}
+.alarmButtons button {
+  width: 60px;
+  border: none;
+  margin: 10px 0 0 10px;
+  padding: 5px;
+}
+#todayInputDiv {
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.select-hour {
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+#add-reminder-container .alarmOnContainer img {
+  cursor: default;
+}
+#add-reminder-container .alarmOnContainer img:hover {
+  transform: scale(1);
+}
+input[type="text"]:focus,
+input[type="text"]:active {
+  outline: none;
+  border: none;
+}
+.calendarImg {
+  margin-top: 2px;
+}
+.clockImg {
+  margin-top: 2px;
+}
+#todayInputDiv input {
+  border: none;
+  background-color: inherit;
+}
+.select-hour input {
+  background-color: lightgray;
+  border: none;
+}
+#alarmCancelBtn {
+  cursor: pointer;
+  background-color: inherit;
+  font-weight: 700;
+}
+#alarmSaveBtn {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: orange;
+  font-weight: 800;
+}
+#alarmSaveBtn:hover {
+  color: white;
+  transition: 0.3s;
+}
+#deletedCategoriesDiv {
+  text-align: center;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 10px;
+  bottom: 70px;
+  min-height: 200px;
+  width: 300px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1rem 1rem 0.5rem;
+  display: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 2.2);
+}
+.closeDeleteCatContainer {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+.deletedCategories {
+  text-align: left;
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+}
+.pinned-text-line {
+  display: flex;
+  align-items: center;
+}
+.saveInCategoryImg {
+  width: 1rem;
+  height: 1rem;
+  float: right;
+  margin-left: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+#search-container .selected {
+  background-color: lightskyblue;
+}
+#search-container .selectedColor {
+  border: 1px solid black;
+}
