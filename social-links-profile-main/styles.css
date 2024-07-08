@@ -1,0 +1,53 @@
+body {
+  font-family: "Inter", sans-serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(0, 0%, 8%);
+}
+.page {
+  border-radius: 15px;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  background-color: hsl(0, 0%, 12%);
+  color: white;
+  padding: 2.5rem;
+}
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+h2 {
+  color: hsl(75, 94%, 57%);
+  margin-top: 0.5rem;
+  font-size: 14px;
+}
+p {
+  margin-bottom: 5px;
+  color: hsl(0, 0%, 70%);
+}
+img {
+  border-radius: 50%;
+  width: 6rem;
+}
+.linkBtn {
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  padding: 0.8rem 2.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+}
+.linkBtn:hover {
+  transition: 0.5s;
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+}
